@@ -4,7 +4,7 @@ Questionário digital responsivo (azul, branco e amarelo) com progressão em 10 
 
 ## Situação do projeto
 
-O formulário está em **MODO DE DEMONSTRAÇÃO**. O PDF fornecido apresenta uma declaração de concordância, mas não inclui o texto completo do TCLE. Também é necessário confirmar a versão DHLI: diversos itens mencionam insuficiência cardíaca, embora o estudo aceite diferentes condições crônicas. As faixas da pergunta sobre renda não foram definidas no PDF.
+O formulário está em **MODO DE DEMONSTRAÇÃO no GitHub**, pois o config.js continua sem endpoint, sem TCLE cadastrado e com approvedForResearch=false; a implantação que a equipe informou ter feito no Apps Script não foi localizada na conta Google conectada para inspeção. Os campos de identificação e as colunas do Google Sheets estão atualizados. O PDF fornecido apresenta uma declaração de concordância, mas não inclui o texto completo do TCLE. Também é necessário confirmar a versão DHLI: diversos itens mencionam insuficiência cardíaca, embora o estudo aceite diferentes condições crônicas. As faixas da pergunta sobre renda não foram definidas no PDF.
 
 Não ative coleta real de dados de saúde antes das revisões ética, metodológica e de segurança.
 
@@ -34,7 +34,7 @@ O site não expõe nem utiliza o ID da planilha. Esse ID fica como propriedade p
 
 Cada envio gera uma linha com identificador aleatório, datas de envio/recebimento, versão, consentimento, dados sociodemográficos, perfil clínico, medicamentos, uso de tecnologia, respostas eHEALS, DHLI, automanejo e agravamentos. Respostas múltiplas são separadas por barra vertical. Campos "Outra – especificar" são gravados como JSON em colunas separadas.
 
-O projeto não adicionou nome, telefone ou e-mail do participante, porque não constam do instrumento fornecido. Os dados pessoais previstos são sociodemográficos e clínicos. Identificadores adicionais exigem justificativa e autorização apropriadas.
+A pedido da equipe de pesquisa, o formulário agora solicita nome completo, telefone com DDD e e-mail, após a elegibilidade. Essas informações serão armazenadas junto aos dados clínicos na planilha restrita, com colunas participant_name, participant_phone e participant_email. Confirmar que o TCLE aprovado contempla expressamente essa identificação e as finalidades de tratamento desses dados.
 
 O front-end não grava respostas em localStorage ou cookies. Respostas ficam somente na memória da aba até envio ou saída.
 
