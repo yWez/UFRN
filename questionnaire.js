@@ -47,7 +47,10 @@ radio("tcle","Li as informações apresentadas e concordo em participar voluntar
 field("age","Qual é a sua idade?","number",{min:0,max:120,description:"Informe sua idade em anos completos."}),
 radio("diagnosed","Você possui diagnóstico médico de alguma doença ou condição crônica?",yn)
 ]},
-{id:"demographic",name:"Seu perfil",icon:"♙",items:[
+{id:"demographic",name:"Identificação e perfil",icon:"♙",items:[
+field("participant_name","Qual é o seu nome completo?","text",{description:"Precisamos identificar sua participação no registro da pesquisa.",autocomplete:"name",maxLength:120}),
+field("participant_phone","Qual é o seu telefone com DDD?","tel",{description:"Informe um celular ou telefone para contato, incluindo o DDD.",autocomplete:"tel",maxLength:16}),
+field("participant_email","Qual é o seu melhor e-mail?","email",{description:"Usaremos esse endereço apenas conforme as finalidades informadas no TCLE.",autocomplete:"email",maxLength:254}),
 radio("sex","Sexo",["Feminino","Masculino","Intersexo","Prefiro não informar"]),
 radio("gender","Identidade de gênero",["Mulher","Homem","Mulher trans","Homem trans","Não binário","Outra identidade – especificar","Prefiro não informar"],{optional:true,otherOption:"Outra identidade – especificar"}),
 radio("race","Raça/cor",["Branca","Preta","Parda","Amarela","Indígena","Prefiro não informar"]),
@@ -107,5 +110,5 @@ radio("interference_41","Atualmente, quanto sua condição de saúde interfere n
 radio("health_42","Como você avalia sua saúde atualmente?",["Muito boa","Boa","Regular","Ruim","Muito ruim"])
 ]}
 ];
-window.SURVEY={version:"2026-10-30-pdf-reformulado",modules:modules,flatten:function(){return modules.flatMap(function(m){return m.items.map(function(q){return Object.assign({moduleId:m.id,moduleName:m.name},q)})})}};
+window.SURVEY={version:"2026-10-30-identificacao-v2",modules:modules,flatten:function(){return modules.flatMap(function(m){return m.items.map(function(q){return Object.assign({moduleId:m.id,moduleName:m.name},q)})})}};
 })();
